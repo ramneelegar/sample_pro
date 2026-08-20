@@ -19,7 +19,7 @@ public class day01 {
         int product = product(arr);
         System.out.println("product of array is " + product);
 
-        // max index
+        // max index of arry
         int maximum = max(arr);
         System.out.println("Maximum: " + maximum);
 
