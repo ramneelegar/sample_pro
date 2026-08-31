@@ -1,0 +1,136 @@
+import java.util.*;
+
+public class day05_interface {
+
+    public static void main(String[] args) {
+
+        mahacal m = new mahacal();
+
+        // Loose coupling
+        calculator c1 = new mycal1();
+        calculator c2 = new mycal2();
+
+        m.permit(c1);
+        m.permit(c2);
+
+        // mycal1 has extra method mul()
+        ((mycal1) c1).mul();
+
+        System.out.println("----------------");
+
+        // calculator2 extends calculator
+        calculator2 c3 = new mycal3();
+
+        c3.add();
+        c3.sub();
+        c3.mul();
+
+        System.out.println("----------------");
+
+        // One class can implement multiple interfaces
+        mycal4 c4 = new mycal4();
+
+        c4.add();
+        c4.sub();
+        c4.div();
+
+    }
+
+
+    // Interface
+    interface calculator {
+
+        void add();
+
+        void sub();
+    }
+
+
+    // Class implements calculator
+    static class mycal1 implements calculator {
+
+        public void add() {
+            System.out.println("Addition: " + (10 + 20));
+        }
+
+        public void sub() {
+            System.out.println("Subtraction: " + (20 - 10));
+        }
+
+        public void mul() {
+            System.out.println("Multiplication: " + (10 * 20));
+        }
+    }
+
+
+    // Another class implements calculator
+    static class mycal2 implements calculator {
+
+        public void add() {
+            System.out.println("Addition: " + (10 + 20));
+        }
+
+        public void sub() {
+            System.out.println("Subtraction: " + (20 - 10));
+        }
+    }
+
+
+    // Class accepts calculator interface
+    static class mahacal {
+
+        void permit(calculator c) {
+
+            c.add();
+            c.sub();
+        }
+    }
+
+
+    // Interface extends another interface
+    interface calculator2 extends calculator {
+
+        void mul();
+    }
+
+
+    // Implements calculator2
+    static class mycal3 implements calculator2 {
+
+        public void add() {
+            System.out.println("Addition: " + (10 + 20));
+        }
+
+        public void sub() {
+            System.out.println("Subtraction: " + (20 - 10));
+        }
+
+        public void mul() {
+            System.out.println("Multiplication: " + (10 * 20));
+        }
+    }
+
+
+    // Another interface
+    interface calculator3 {
+
+        void div();
+    }
+
+
+    // Class can implement MULTIPLE interfaces
+    static class mycal4 implements calculator, calculator3 {
+
+        public void add() {
+            System.out.println("Addition: " + (10 + 20));
+        }
+
+        public void sub() {
+            System.out.println("Subtraction: " + (20 - 10));
+        }
+
+        public void div() {
+            System.out.println("Division: " + (20 / 10));
+        }
+    }
+}
