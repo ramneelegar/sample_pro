@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class Day05Inheritance {
+public class day05Inheritance {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
