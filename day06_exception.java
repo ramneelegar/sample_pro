@@ -33,5 +33,19 @@ class day06_exception{
         catch(ArithmeticException ae ){
             System.out.println("provide non-zero");
         }
+        catch(NegativeArraySizeException nae ){
+            System.out.println("provide positive integer");
+        }
+        catch(InputMismatchException ime ){
+            System.out.println(" provide only integer");
+        }
+        catch(ArrayIndexOutOfBoundsException aie ){
+            System.out.println("provide valid index");
+        }
+        // we should write at the lastt
+        catch(Exception e){
+            System.out.println("invalid input");
+        }
+        System.out.println("connection terminated.");
     }
 }
