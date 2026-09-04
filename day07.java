@@ -89,4 +89,17 @@ public class day07 {
         
         return setarr;
     }
+
+     public static String removeDuplicate(String s) {
+        LinkedHashSet<Character> set = new LinkedHashSet<Character>();
+        for(int i=0; i<s.length(); i++){
+            set.add(s.charAt(i));
+        }   
+        String t="";
+        for(char x:set){
+            t+=x;
+            //  System.out.println(x +" ");
+        }
+        return t;
+    }
 }
