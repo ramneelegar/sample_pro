@@ -69,4 +69,24 @@ public class day07 {
 
         // System.out.println(alphorder(s));
     }
+
+    public static TreeSet<String> alphorder(String s) {
+        TreeSet<Character> alph = new TreeSet<Character>();
+        String[] arr = s.split(",");
+        for(int i=0; i<arr.length; i++){
+            alph.add(arr[i]);
+        }   
+        
+        return alph;
+    }
+
+
+    public static TreeSet<Integer> removeDuplicatearr(int [] arr) {
+        TreeSet<Integer> setarr = new TreeSet<Integer>();
+        for(int i=0; i<arr.length; i++){
+            setarr.add(arr[i]);
+        }   
+        
+        return setarr;
+    }
 }
