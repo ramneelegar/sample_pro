@@ -89,4 +89,11 @@ public class day08_matrix{
             }l++;
         }
     }
+
+    public static int[][] rotate90deg(int[][] arr) {
+        // first transpose it and again reverse the matrix
+        // int [][] aa = transpose(arr);
+        int[][] ans= mirror(arr);
+        return ans;
+    }
 }
