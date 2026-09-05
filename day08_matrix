@@ -119,4 +119,26 @@ public class day08_matrix{
             }System.out.println();
         }
     }
+
+    public static void boundry(int [][]arr) {
+        int i=0; 
+        int j=0; 
+        for(j=0; j<arr[i].length; j++){
+            System.out.print(arr[i][j]+" ");
+        }
+        
+        j= arr.length-1;
+        for(i=1; i<arr[i].length; i++){
+            System.out.print(arr[i][j]+" ");
+        }
+        i = arr.length-1;
+        for(j=arr.length-2; j>=0; j--){
+            System.out.print(arr[i][j]+" ");
+        }
+        
+        j=0;
+        for(i=arr.length -2; i>=1; i--){
+            System.out.print(arr[i][j]+" ");
+        }  
+    }
 }
