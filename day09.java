@@ -67,6 +67,27 @@ public class day09 {
     }
 
     
+    public static int pairinArray(int [] arr){
+    LinkedHashMap<Integer, Integer> a = new LinkedHashMap<Integer, Integer>();
+        for (int i = 0; i < arr.length; i++) {
+            
+            if (a.containsKey(arr[i])) {
+                int c = a.get(arr[i]);
+                a.put(arr[i], ++c);
+            } else {
+                a.put(arr[i], 1);
+            }
+        }
+
+        int sum =0;
+        Set<Map.Entry<Integer, Integer>> entries = a.entrySet();
+        for (Map.Entry<Integer, Integer> e : entries) {
+            sum +=(e.getValue()/2);
+        }
+        return sum;   
+    }
+
+    
 }
 
 
