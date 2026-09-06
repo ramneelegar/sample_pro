@@ -46,6 +46,27 @@ public class day09 {
 
         sc.close();
     }
+
+    public static String countOcurance(String s) {
+        LinkedHashMap<Character, Integer> a = new LinkedHashMap<Character, Integer>();
+        for (int i = 0; i < s.length(); i++) {
+            char ch = s.charAt(i);
+            if (a.containsKey(ch)) {
+                int c = a.get(ch);
+                a.put(ch, ++c);
+            } else {
+                a.put(ch, 1);
+            }
+        }
+        String t = "";
+        Set<Map.Entry<Character, Integer>> entries = a.entrySet();
+        for (Map.Entry<Character, Integer> e : entries) {
+            t = t + e.getKey() + "" + e.getValue();
+        }
+        return t;
+    }
+
+    
 }
 
 
