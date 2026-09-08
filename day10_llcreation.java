@@ -27,3 +27,26 @@ class node{
         next = null;
     }
 }
+
+
+class linkedlist{
+    node head ;
+    void printlist(){
+        node curr = head;
+
+        //  traversing the the entire linked list
+        while(curr != null){
+        System.out.println(curr.data);
+        curr = curr.next;
+        }
+
+        // traversing still n-1
+        // while(curr.next != null){
+        //     System.out.println(curr.data);
+        //     curr = curr.next;
+        // }
+
+        // use curr.next.next to traverse till n-2
+    
+    }
+}
