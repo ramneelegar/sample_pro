@@ -87,6 +87,19 @@ public class day09 {
         return sum;   
     }
 
+
+    public static void wordsmorethn3(String s2){
+    LinkedHashMap<String, Integer> a = new LinkedHashMap<String, Integer>();
+    String [] arr = s2.split(" ");
+        for (int i = 0; i < arr.length; i++) {     
+            if (a.containsKey(arr[i])) {
+                int c = a.get(arr[i]);
+                a.put(arr[i], ++c);
+            } else {
+                a.put(arr[i], 1);
+            }
+        }
+    }
     
 }
 
