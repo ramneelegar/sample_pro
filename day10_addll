@@ -65,4 +65,17 @@ class linkedlist2{
             curr = curr.next;
         }
     }
+
+    void add(int ele){
+        node temp = new node(ele);
+        if(this.head == null){
+            this.head = temp;
+        }else{
+            node curr = this.head;
+            while(curr.next != null){  // curren.next becz we want address to be null
+                curr = curr.next;
+            }
+            curr.next = temp;
+        }
+    }
 }
