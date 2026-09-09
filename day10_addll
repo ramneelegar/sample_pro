@@ -40,3 +40,29 @@ public class day10_addll {
     }
     
 }
+
+
+class node{
+    int data;
+    node next;  
+    node(int data){
+        this.data = data;
+        next = null;
+    }
+}
+
+
+class linkedlist2{
+    node head ;
+
+    // for printing  all ele of LL
+    void printlist(){
+        node curr = head;
+
+        //  traversing the the entire linked list
+        while(curr != null){
+            System.out.println(curr.data);
+            curr = curr.next;
+        }
+    }
+}
