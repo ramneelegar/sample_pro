@@ -1,0 +1,42 @@
+public class day10_addll {
+    public static void main(String[] args) {
+        linkedlist2 ll = new linkedlist2();
+        ll.add(100);
+        ll.add(200);
+        ll.add(300);
+        ll.add(400);
+
+
+        ll.addfirst(5);
+
+        ll.addlast(55);
+
+        // add at index
+        ll.addatindex(3, 250);
+
+        int [] arr = {11,12,13,14,15};
+        ll.addall(arr);
+
+
+        ll.removefirst();
+        ll.removelast();  
+
+        //printing ele
+        ll.printlist();
+
+        int index = ll.indexof(250); 
+        System.out.println("Index of 250: " + index);
+
+        int lastIndex = ll.indexoflast(12); 
+        System.out.println("Last index of 12: " + lastIndex);
+
+        int size = ll.size();  
+        System.out.println("Size of linked list: " + size);
+
+
+        // p1.next = p2;
+        // p2.next = p3;   
+        // p3.next = p4;
+    }
+    
+}
