@@ -88,4 +88,19 @@ class linkedlist2{
             this.head = temp;
         }
     }
+
+    void addlast(int ele){
+        node temp = new node(ele);
+        if(this.head == null){
+            head = temp;
+        }else{
+            node curr =head;
+            while(curr.next != null){  
+                curr = curr.next;
+            }
+            curr.next = temp;
+        }
+    }
+
+
 }
