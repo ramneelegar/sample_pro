@@ -119,9 +119,26 @@ class linkedlist2{
         }
     }
 
+
     void addall(int [] arr){
         for(int ele:arr){
             add(ele);
+        }
+    }
+
+
+    void removefirst(){
+        node curr = head;
+        // if no ele present
+        if(head == null){
+            System.out.println("LL is empty");
+        } // if only one ele present
+        else if(head.next == null){   // h.next means cheking address
+            head = null;
+        }// more than one ele present
+        else{
+            head = head.next;
+            curr.next = null;
         }
     }
 
