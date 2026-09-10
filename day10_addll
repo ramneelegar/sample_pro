@@ -78,4 +78,14 @@ class linkedlist2{
             curr.next = temp;
         }
     }
+
+    void addfirst(int ele){
+        node temp = new node(ele);
+        if(this.head == null){
+            head = temp;
+        }else{
+            temp.next = this.head;  // giving the address of head to temp.next
+            this.head = temp;
+        }
+    }
 }
