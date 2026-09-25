@@ -57,6 +57,13 @@ public class day11_recursion{
         return fibo(n-1)+fibo(n-2);
     }
 
+    public static void natural(int n){
+        if(n==0){
+            return;
+        }
+        natural(n-1);  // if u called natural(n-1) after the print statement then it will print in reverse order
+        System.out.println(n);
+    }
     
 
 }
