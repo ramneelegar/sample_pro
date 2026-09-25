@@ -43,47 +43,6 @@ public class day11_recursion{
         fun(n-1);
     }
 
-    public static int fac(int n){
-        if(n==0 || n==1 ){
-            return 1;
-        }
-        return n*fac(n-1);
-    }
-
-    public static int fibo(int n){
-        if(n==1 || n==2){
-            return 1;
-        }
-        return fibo(n-1)+fibo(n-2);
-    }
-
-    public static void natural(int n){
-        if(n==0){
-            return;
-        }
-        natural(n-1);  // if u called natural(n-1) after the print statement then it will print in reverse order
-        System.out.println(n);
-    }
-
-    public static int countdigit(int n){
-        if(n==0){
-            return 0;
-        }
-        return countdigit(n/10)+1;
-    }
-
-    public static int sumofdigit(int n){
-        if(n==0){
-            return 0;
-        }
-        return n%10 +sumofdigit(n/10) ;
-    }
-
-    public static int sumofarray(int[] arr, int i){
-        if(i == arr.length){  
-            return 0;
-        }
-        return sumofarray(arr, i+1) + arr[i];
-    }
+    
 
 }
