@@ -17,5 +17,18 @@ public class day12_trees {
         t.printkdis(root, 2);
 
         t.levelorder(root, 3);
+
+
+    }
+}
+
+class Node {
+    int data;
+    Node left;
+    Node right;
+    Node(int data) {
+        this.data = data;
+        this.left = null;
+        this.right = null;
     }
 }
