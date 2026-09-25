@@ -49,4 +49,12 @@ class Tree {
             preorder(root.right);
         }
     }
+
+    static void postorder(Node root) {
+        if (root != null) {
+            postorder(root.left);
+            postorder(root.right);
+            System.out.print(root.data + " ");
+        }
+    }
 }
