@@ -32,3 +32,13 @@ class Node {
         this.right = null;
     }
 }
+
+class Tree {
+    static void inorder(Node root) {
+        if (root != null) {
+            inorder(root.left);
+            System.out.print(root.data + " ");
+            inorder(root.right);
+        }
+    }
+}
