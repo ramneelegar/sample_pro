@@ -41,4 +41,12 @@ class Tree {
             inorder(root.right);
         }
     }
+
+    static void preorder(Node root) {
+        if (root != null) {
+            System.out.print(root.data + " ");
+            preorder(root.left);
+            preorder(root.right);
+        }
+    }
 }
