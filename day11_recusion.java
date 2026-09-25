@@ -64,6 +64,27 @@ public class day11_recursion{
         natural(n-1);  // if u called natural(n-1) after the print statement then it will print in reverse order
         System.out.println(n);
     }
+
+    public static int countdigit(int n){
+        if(n==0){
+            return 0;
+        }
+        return countdigit(n/10)+1;
+    }
+
+    public static int sumofdigit(int n){
+        if(n==0){
+            return 0;
+        }
+        return n%10 +sumofdigit(n/10) ;
+    }
+
+    public static int sumofarray(int[] arr, int i){
+        if(i == arr.length){  
+            return 0;
+        }
+        return sumofarray(arr, i+1) + arr[i];
+    }
     
 
 }
