@@ -88,4 +88,19 @@ class Tree {
             return leftSize + rightSize + 1;
         }
     }
+
+    public static int levelorder(Node root, int level) {
+        if (root != null) {
+            return 0;
+            LinkedList<Node> queue = new LinkedList<>();
+            queue.add(root);
+        while(!queue.isEmpty()){
+            Node curr = queue.poll();
+            if(curr.left != null){
+                queue.add(curr.left);
+            }if(curr.right != null){
+                queue.add(curr.right);
+            }
+        }
+    }
 }
