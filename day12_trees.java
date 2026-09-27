@@ -78,4 +78,14 @@ class Tree {
             }
         }
     }
+
+    public static int size(Node root) {
+        if (root == null) {
+            return 0;
+        } else {
+            int leftSize = size(root.left);
+            int rightSize = size(root.right);
+            return leftSize + rightSize + 1;
+        }
+    }
 }
