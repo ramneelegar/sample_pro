@@ -67,4 +67,15 @@ class Tree {
             return Math.max(leftHeight, rightHeight) + 1;
         }
     }
+
+    public static void printkdis(Node root , int k){
+        if(root != null){
+            if(k == 0){
+                System.out.println(root.data);
+            }else{
+                printkdis(root.left, k-1);
+                printkdis(root.right, k-1);
+            }
+        }
+    }
 }
