@@ -1,0 +1,14 @@
+import java.util.Arrays;
+
+public class day13 {
+    public static void main(String[] args) {
+        int  n = 4;
+        int [] arr = new int[n+1];
+        Arrays.fill(arr, -1);
+
+        int [] jumps = {2, 3, 1};
+
+        System.out.println(noofwaysMemorization(n, arr, jumps));
+        System.out.println(noofwaysTabulation(n, jumps));
+    }
+}
