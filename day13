@@ -11,4 +11,22 @@ public class day13 {
         System.out.println(noofwaysMemorization(n, arr, jumps));
         System.out.println(noofwaysTabulation(n, jumps));
     }
+
+    public static int noofwaysMemorization(int n, int [] arr, int [] jumps){
+        if(arr[n]==-1){
+            if(n==0 || n==1 ){
+                arr[n] = 1;
+            }
+            else{
+                int total =0;
+                for(int i=0; i<jumps.length; i++){
+                    if(n-jumps[i]>=0){
+                        total += noofwaysMemorization(n-jumps[i], arr, jumps);
+                    }
+                }
+                arr[n] = total;
+            }
+        }
+        return arr[n];  
+    }
 }
