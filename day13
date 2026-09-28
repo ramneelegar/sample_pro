@@ -29,4 +29,20 @@ public class day13 {
         }
         return arr[n];  
     }
+
+    public static int noofwaysTabulation(int n, int [] jumps){
+        int [] num = new int[n+1];
+        num[0] = 1;
+        num[1] = 1;
+        for(int i=2; i<num.length; i++){
+            int total =0;
+            for(int j=0; j<jumps.length; j++){
+                if(i-jumps[j]>=0){
+                    total += num[i-jumps[j]];
+                }
+            }
+            num[i] = total;
+        }
+        return num[n];
+    }
 }
